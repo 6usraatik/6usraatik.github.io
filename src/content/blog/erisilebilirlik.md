@@ -1,7 +1,7 @@
 ---
 title: 'Erişilebilir Şehir & Sosyal Dayanışma Plartformu'
 description: '3 kişilik geliştirici ekibimizle bir hackathon süresince kısıtlı zamanda tasarlayıp hayata geçirdiğimiz projenin mimari detayları ve hikayesi.'
-pubDate: 'May 10 2026'
+pubDate: '10 May 2026'
 ---
 
 ## 🎯 Hackathon Serüveni ve Projenin Amacı
