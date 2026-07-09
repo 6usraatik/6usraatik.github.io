@@ -43,7 +43,9 @@ const { title, description, pubDate, updatedDate, heroImage } = Astro.props;
 				line-height: 1;
 			}
 			.title h1 {
-				margin: 0 0 0.5em 0;
+				font-size: clamp(1.5rem, 5vw + 1rem, 3rem); 
+    			line-height: 1.2; /* Satır aralığını daraltarak bölünmeyi azaltır */
+    			word-break: break-word; /* Çok uzun kelimeler varsa kelimeyi bölerek taşmayı engeller */
 			}
 			.date {
 				margin-bottom: 0.5em;

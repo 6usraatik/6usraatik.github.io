@@ -1,7 +1,7 @@
 ---
 title: 'Mini IDS: Ağ Saldırı Tespit Sistemi'
 description: 'Staj projesi kapsamında ağ trafiğini anlık olarak izleyen ve şüpheli paket aktarımlarını/saldırı senaryolarını tespit etmek üzere geliştirmekte olduğum IDS projesi.'
-pubDate: '09 Tem 2026'
+pubDate: 2026-07-09
 ---
 
 <!-- YAPIM AŞAMASINDA ROZETİ (Sıcak Kum ve Adaçayı Tonlarında) -->
