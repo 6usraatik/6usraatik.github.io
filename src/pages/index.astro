@@ -1,49 +1,263 @@
 ---
 import BaseHead from '../components/BaseHead.astro';
-import Footer from '../components/Footer.astro';
 import Header from '../components/Header.astro';
-import { SITE_DESCRIPTION, SITE_TITLE } from '../consts';
+import Footer from '../components/Footer.astro';
+import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 ---
 
 <!doctype html>
-<html lang="en">
-	<head>
-		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
-	</head>
-	<body>
-		<Header />
-		<main>
-			<h1>🧑‍🚀 Hello, Astronaut!</h1>
-			<p>
-				Welcome to the official <a href="https://astro.build/">Astro</a> blog starter template. This template
-				serves as a lightweight, minimally-styled starting point for anyone looking to build a personal
-				website, blog, or portfolio with Astro.
-			</p>
-			<p>
-				This template comes with a few integrations already configured in your
-				<code>astro.config.mjs</code> file. You can customize your setup with
-				<a href="https://astro.build/integrations">Astro Integrations</a> to add tools like Tailwind,
-				React, or Vue to your project.
-			</p>
-			<p>Here are a few ideas on how to get started with the template:</p>
-			<ul>
-				<li>Edit this page in <code>src/pages/index.astro</code></li>
-				<li>Edit the site header items in <code>src/components/Header.astro</code></li>
-				<li>Add your name to the footer in <code>src/components/Footer.astro</code></li>
-				<li>Check out the included blog posts in <code>src/content/blog/</code></li>
-				<li>Customize the blog post page layout in <code>src/layouts/BlogPost.astro</code></li>
-			</ul>
-			<p>
-				Have fun! If you get stuck, remember to
-				<a href="https://docs.astro.build/">read the docs</a>
-				or <a href="https://astro.build/chat">join us on Discord</a> to ask questions.
-			</p>
-			<p>
-				Looking for a blog template with a bit more personality? Check out
-				<a href="https://github.com/Charca/astro-blog-template">astro-blog-template</a>
-				by <a href="https://twitter.com/Charca">Maxi Ferreira</a>.
-			</p>
-		</main>
-		<Footer />
-	</body>
+<html lang="tr">
+  <head>
+    <BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
+  </head>
+  <body>
+    <Header />
+    
+    <main>
+      <div class="status-badge">
+        <span class="status-dot"></span>
+        <span>🚀 Yeni projeler üzerine çalışıyor</span>
+      </div>
+
+      <!-- index.astro içerisindeki ilgili satır -->
+      <h1><span class="handwriting-greeting">Merhaba, ben Büşra Atik! </span>👋</h1>
+      <p>
+        Bilgisayar bilimleri dünyasındaki öğrenme yolculuğumu, üzerinde çalıştığım yazılım projelerini ve teknik araştırmalarımı paylaştığım dijital çalışma alanıma hoş geldin.
+      </p>
+
+      <div class="tech-stack">
+        <span class="tech-tag">⚙️ C++</span>
+		<span class="tech-tag">🔷 C#</span>
+		<span class="tech-tag">🎨 HTML-CSS</span>
+		<span class="tech-tag">⌨️ Bash</span>
+        <span class="tech-tag">🌐 Ağ Teknolojileri</span>
+        <span class="tech-tag">🛡️ Siber Güvenlik</span>
+        <span class="tech-tag">🐧 Kali Linux</span>
+		<span class="tech-tag">🪟 Windows</span>
+      </div>
+
+      <div class="action-buttons">
+        <a href="https://www.linkedin.com/in/6usraatik" target="_blank" class="btn btn-secondary">💼 LinkedIn</a>
+        <a href="https://github.com/6usraatik" target="_blank" class="btn btn-secondary">🐙 GitHub Profilim</a>
+		<a href="https://www.credly.com/users/busra-atik" target="_blank" class="btn btn-secondary">🏅 Credly Rozetlerim</a>
+      </div>
+
+      <hr />
+
+    </main>
+
+    <Footer />
+  </body>
 </html>
+
+<style>
+  /* ==========================================================================
+     ÖZEL RENK PALETİ VE DEĞİŞKENLER (Doğal, Pastel ve Sıcak Tonlar)
+     ========================================================================== */
+  main {
+    /* Aydınlık Mod - Sıcak Bej, Adaçayı Yeşili ve Pastel Slate Mavi */
+    --text-main: #2c2926;          /* Çiğ siyah yerine derin espresso kahvesi */
+    --text-muted: #645f5b;         /* Yumuşak sıcak gri-kahve */
+    --accent-green: #597a61;       /* Adaçayı / Orman yeşili */
+    --bg-green: #eff4ec;           /* Çok hafif pastel yeşil arkaplan */
+    --border-green: #d1ded2;
+    --accent-blue: #4d6d88;        /* Pastel slate-mavi */
+    --accent-blue-hover: #3b556b;  /* Derin deniz mavisi */
+    --tag-bg: #f5f2eb;             /* Sıcak kum/bej tonu */
+    --tag-border: #e6e0d6;
+    --btn-sec-bg: #f7f5f0;
+    --btn-sec-border: #dcd6cd;
+    --btn-sec-hover: #eae4db;
+    --shadow-soft: 0 10px 30px -10px rgba(115, 102, 90, 0.12);
+
+    width: 720px;
+    max-width: calc(100% - 2em);
+    margin: auto;
+    padding: 4em 1em;
+    color: var(--text-main);
+  }
+
+  /* ==========================================================================
+     GİRİŞ VE KAYDIRMA ANİMASYONLARI (Modern Cubic-Bezier Geçişleri)
+     ========================================================================== */
+  @keyframes fadeSlideUp {
+    0% {
+      opacity: 0;
+      transform: translateY(24px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  /* Elemanların sayfaya sırayla, yumuşakça süzülerek gelmesi (Staggered Effect) */
+  .status-badge { animation: fadeSlideUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) 0.1s forwards; opacity: 0; }
+  h1            { animation: fadeSlideUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) 0.2s forwards; opacity: 0; }
+  p             { animation: fadeSlideUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) 0.3s forwards; opacity: 0; }
+  .tech-stack   { animation: fadeSlideUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) 0.4s forwards; opacity: 0; }
+  .action-buttons { animation: fadeSlideUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) 0.5s forwards; opacity: 0; }
+  hr            { animation: fadeSlideUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) 0.6s forwards; opacity: 0; }
+
+  /* ==========================================================================
+     TİPOGRAFİ (Modern, Okunaklı ve Şık)
+     ========================================================================== */
+  h1 {
+    font-size: 2.6rem;
+    font-weight: 800;
+    letter-spacing: -0.03em;       /* Modern editoryal başlık karakteristiği */
+    color: var(--text-main);
+    margin: 0.5rem 0 1.2rem 0;
+    line-height: 1.2;
+  }
+  
+  p {
+    font-size: 1.1rem;
+    line-height: 1.8;              /* Okumayı yormayan ferah satır aralığı */
+    color: var(--text-muted);
+    margin-bottom: 1.5rem;
+    font-weight: 400;
+  }
+
+  hr {
+    border: none;
+    height: 1px;
+    background: linear-gradient(90deg, var(--tag-border) 0%, transparent 100%);
+    margin: 3rem 0;
+  }
+
+  /* ==========================================================================
+     BİLEŞEN TASARIMLARI (Doğal Formlar ve Yumuşak Gölgeler)
+     ========================================================================== */
+  /* 1. Canlı Durum Rozeti (Adaçayı Yeşili) */
+  .status-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    background: var(--bg-green);
+    color: var(--accent-green);
+    padding: 6px 14px;
+    border-radius: 30px;
+    font-size: 0.85em;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    border: 1px solid var(--border-green);
+    box-shadow: 0 4px 12px rgba(89, 122, 97, 0.06);
+    transition: all 0.3s ease;
+  }
+  .status-badge:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 6px 16px rgba(89, 122, 97, 0.12);
+  }
+  
+  /* Yeşil noktaya canlılık katan nefes alma (pulse) efekti */
+  @keyframes pulse {
+    0% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(89, 122, 97, 0.4); }
+    70% { transform: scale(1); box-shadow: 0 0 0 6px rgba(89, 122, 97, 0); }
+    100% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(89, 122, 97, 0); }
+  }
+  .status-dot {
+    width: 8px;
+    height: 8px;
+    background-color: var(--accent-green);
+    border-radius: 50%;
+    animation: pulse 2.5s infinite;
+  }
+
+  /* 2. Teknoloji Etiketleri (Sıcak Kum ve Bej) */
+  .tech-stack {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin: 2rem 0;
+  }
+  .tech-tag {
+    background: var(--tag-bg);
+    color: var(--text-main);
+    padding: 8px 16px;
+    border-radius: 12px;           /* Daha organik, yumuşak köşeler */
+    font-size: 0.88em;
+    font-weight: 500;
+    border: 1px solid var(--tag-border);
+    transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+  .tech-tag:hover {
+    transform: translateY(-3px) scale(1.02);
+    background: #fff;
+    border-color: var(--accent-blue);
+    box-shadow: var(--shadow-soft);
+  }
+
+  /* 3. Butonlar (Pastel Mavi & Sıcak Dokular) */
+  .action-buttons {
+    display: flex;
+    gap: 14px;
+    margin: 2.5rem 0;
+    flex-wrap: wrap;
+  }
+  .btn {
+    padding: 12px 22px;
+    border-radius: 12px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.95em;
+    transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+  }
+  .btn-primary {
+    background-color: var(--accent-blue);
+    color: #ffffff !important;
+    box-shadow: 0 4px 14px rgba(77, 109, 136, 0.25);
+  }
+  .btn-primary:hover {
+    background-color: var(--accent-blue-hover);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(77, 109, 136, 0.35);
+  }
+  .btn-secondary {
+    background-color: var(--btn-sec-bg);
+    color: var(--text-main) !important;
+    border: 1px solid var(--btn-sec-border);
+  }
+  .btn-secondary:hover {
+    background-color: var(--btn-sec-hover);
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-soft);
+  }
+
+  /* ==========================================================================
+     KARANLIK MOD (Dark Mode) - Sıcak Koyu Kahve ve Derin Yeşil/Mavi Uyumu
+     ========================================================================== */
+  :global(.dark) main {
+    --text-main: #f3efe6;          /* Sıcak kırık beyaz / krem */
+    --text-muted: #a8a29e;         /* Sıcak koyu gri */
+    --accent-green: #86b090;       /* Aydınlık adaçayı */
+    --bg-green: rgba(89, 122, 97, 0.15);
+    --border-green: rgba(134, 176, 144, 0.25);
+    --accent-blue: #648dae;        /* Pastel açık slate */
+    --accent-blue-hover: #7ba2c0;
+    --tag-bg: #262320;             /* Derin sıcak espresso arkaplan */
+    --tag-border: #383430;
+    --btn-sec-bg: #262320;
+    --btn-sec-border: #3f3b37;
+    --btn-sec-hover: #322e2a;
+    --shadow-soft: 0 10px 30px -10px rgba(0, 0, 0, 0.5);
+  }
+  
+  :global(.dark) .tech-tag:hover {
+    background: #322e2a;
+    border-color: var(--accent-blue);
+  }
+
+  /* Ana sayfadaki el yazısı efekti */
+  .handwriting-greeting {
+    font-family: 'Caveat', cursive;
+    color: var(--accent-green); /* Adaçayı yeşili */
+    font-size: 1.1em;           /* Yanındaki yazıya göre biraz daha vurgulu */
+    margin-right: 8px;
+    display: inline-block;
+    transform: rotate(-2deg);   /* Hafif imza eğimi */
+  }
+</style>

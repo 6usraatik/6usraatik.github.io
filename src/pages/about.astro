@@ -1,63 +1,433 @@
 ---
-import AboutHeroImage from '../assets/blog-placeholder-about.jpg';
-import Layout from '../layouts/BlogPost.astro';
+import BaseHead from '../components/BaseHead.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 ---
 
-<Layout
-	title="About Me"
-	description="Lorem ipsum dolor sit amet"
-	pubDate={new Date('August 08 2021')}
-	heroImage={AboutHeroImage}
->
-	<p>
-		Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-		labore et dolore magna aliqua. Vitae ultricies leo integer malesuada nunc vel risus commodo
-		viverra. Adipiscing enim eu turpis egestas pretium. Euismod elementum nisi quis eleifend quam
-		adipiscing. In hac habitasse platea dictumst vestibulum. Sagittis purus sit amet volutpat. Netus
-		et malesuada fames ac turpis egestas. Eget magna fermentum iaculis eu non diam phasellus
-		vestibulum lorem. Varius sit amet mattis vulputate enim. Habitasse platea dictumst quisque
-		sagittis. Integer quis auctor elit sed vulputate mi. Dictumst quisque sagittis purus sit amet.
-	</p>
+<!doctype html>
+<html lang="tr">
+	<head>
+		<BaseHead title={`Hakkımda & Özgeçmiş | ${SITE_TITLE}`} description={SITE_DESCRIPTION} />
+	</head>
+	<body>
+		<Header />
+		<main>
+			<section class="bio-section">
+				<span class="handwriting-greeting">Merhaba! Ben Büşra Atik.👋</span>
+				<p class="lead-text">
+					Atatürk Üniversitesi Bilgisayar Mühendsiliği bölümü öğrencisiyim. 
+				</p>
+				<p>
+					Özellikle <strong>Siber Güvenlik, Ağ Protokolleri ve Backend Geliştirme</strong> alanlarında derinleşiyor; öğrendiğim teorik kavramları pratik ve açık kaynaklı projelerle hayata geçiriyorum.
+				</p>
+			</section>
 
-	<p>
-		Morbi tristique senectus et netus. Id semper risus in hendrerit gravida rutrum quisque non
-		tellus. Habitasse platea dictumst quisque sagittis purus sit amet. Tellus molestie nunc non
-		blandit massa. Cursus vitae congue mauris rhoncus. Accumsan tortor posuere ac ut. Fringilla urna
-		porttitor rhoncus dolor. Elit ullamcorper dignissim cras tincidunt lobortis. In cursus turpis
-		massa tincidunt dui ut ornare lectus. Integer feugiat scelerisque varius morbi enim nunc.
-		Bibendum neque egestas congue quisque egestas diam. Cras ornare arcu dui vivamus arcu felis
-		bibendum. Dignissim suspendisse in est ante in nibh mauris. Sed tempus urna et pharetra pharetra
-		massa massa ultricies mi.
-	</p>
+			<hr />
 
-	<p>
-		Mollis nunc sed id semper risus in. Convallis a cras semper auctor neque. Diam sit amet nisl
-		suscipit. Lacus viverra vitae congue eu consequat ac felis donec. Egestas integer eget aliquet
-		nibh praesent tristique magna sit amet. Eget magna fermentum iaculis eu non diam. In vitae
-		turpis massa sed elementum. Tristique et egestas quis ipsum suspendisse ultrices. Eget lorem
-		dolor sed viverra ipsum. Vel turpis nunc eget lorem dolor sed viverra. Posuere ac ut consequat
-		semper viverra nam. Laoreet suspendisse interdum consectetur libero id faucibus. Diam phasellus
-		vestibulum lorem sed risus ultricies tristique. Rhoncus dolor purus non enim praesent elementum
-		facilisis. Ultrices tincidunt arcu non sodales neque. Tempus egestas sed sed risus pretium quam
-		vulputate. Viverra suspendisse potenti nullam ac tortor vitae purus faucibus ornare. Fringilla
-		urna porttitor rhoncus dolor purus non. Amet dictum sit amet justo donec enim.
-	</p>
+			<section class="timeline-section">
+				<h2>🎓 Eğitim ve Gelişim Yolculuğum</h2>
+				<div class="timeline">
+					
+					<div class="timeline-item">
+						<div class="timeline-dot"></div>
+						<div class="timeline-content">
+							<span class="time-badge">Eylül 2022-Haziran 2027</span>
+							<h3>Bilgisayar Mühendsiliği Öğrencisi</h3>
+							<p class="institution">Atatürk Üniversitesi</p>
+							<p class="details">
+								Bilgisayar Ağları, Paralel Programlama ve Algoritma Analizi gibi temel mühendislik derslerinde teorik ve uygulamalı projeler geliştirerek eğitimime devam ediyorum.
+							</p>
+						</div>
+					</div>
 
-	<p>
-		Mattis ullamcorper velit sed ullamcorper morbi tincidunt. Tortor posuere ac ut consequat semper
-		viverra. Tellus mauris a diam maecenas sed enim ut sem viverra. Venenatis urna cursus eget nunc
-		scelerisque viverra mauris in. Arcu ac tortor dignissim convallis aenean et tortor at. Curabitur
-		gravida arcu ac tortor dignissim convallis aenean et tortor. Egestas tellus rutrum tellus
-		pellentesque eu. Fusce ut placerat orci nulla pellentesque dignissim enim sit amet. Ut enim
-		blandit volutpat maecenas volutpat blandit aliquam etiam. Id donec ultrices tincidunt arcu. Id
-		cursus metus aliquam eleifend mi.
-	</p>
+					<div class="timeline-item">
+						<div class="timeline-dot"></div>
+						<div class="timeline-content">
+							<span class="time-badge">Temmuz-Ağustos 2026</span>
+							<h3>Stajyer</h3>
+							<p class="institution">webbeyaz.com</p>
+							<p class="details">
+								6 Temmuz-31 Ağustos 2026 tarihleri arasında 40 günlük zorunlu staj.
+							</p>
+						</div>
+					</div>
 
-	<p>
-		Tempus quam pellentesque nec nam aliquam sem. Risus at ultrices mi tempus imperdiet. Id porta
-		nibh venenatis cras sed felis eget velit. Ipsum a arcu cursus vitae. Facilisis magna etiam
-		tempor orci eu lobortis elementum. Tincidunt dui ut ornare lectus sit. Quisque non tellus orci
-		ac. Blandit libero volutpat sed cras. Nec tincidunt praesent semper feugiat nibh sed pulvinar
-		proin gravida. Egestas integer eget aliquet nibh praesent tristique magna.
-	</p>
-</Layout>
+				</div>
+			</section>
+
+			<section class="skills-section">
+				<h2>💻 Teknik Yetkinlikler ve Araçlar</h2>
+				
+				<div class="skills-grid">
+					<div class="skill-card">
+						<h4>⚡ Programlama Dilleri</h4>
+						<div class="tags">
+							<span>C++</span>
+							<span>C#</span>
+							<span>HTML & CSS</span>
+							<span>Bash Scripting</span>
+						</div>
+					</div>
+
+					<div class="skill-card">
+						<h4>🌐 Ağ & Siber Güvenlik</h4>
+						<div class="tags">
+							<span>TCP/IP & ARP</span>
+							<span>Paket Analizi</span>
+							<span>Ağ Tarama & IDS</span>
+							<span>Port Taramaları</span>
+							<span>Linux / Kali Linux</span>
+						</div>
+					</div>
+
+					<div class="skill-card">
+						<h4>⚙️ Mühendislik & Kavramlar</h4>
+						<div class="tags">
+							<span>Paralel Programlama (MPI)</span>
+							<span>Algoritma Tasarımı</span>
+							<span>Nesne Yönelimli Programlama (OOP)</span>
+							<span>Windows OS</span>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<section class="cert-section">
+				<div class="cert-box">
+					<div class="cert-icon">🏅</div>
+					<div class="cert-info">
+						<h3>Sertifikalar ve Credly Rozetlerim</h3>
+						<p>
+							Siber güvenlik, ağ teknolojileri ve yazılım geliştirme süreçlerinde uluslararası geçerliliği olan eğitim rozetlerimi ve yetkinlik sertifikalarımı Credly profilim üzerinden inceleyebilirsin.
+						</p>
+						<a href="https://www.credly.com/users/busra-atik" target="_blank" class="cert-link">
+							Credly Profilimi Ziyaret Et ➔
+						</a>
+					</div>
+				</div>
+			</section>
+
+			<section class="contact-section">
+				<h2>🤝 Benimle İletişime Geç</h2>
+				<p>Aşağıdaki ağlarımdan bana ulaşabilirsin!</p>
+				
+				<div class="action-buttons">
+					<a href="https://www.linkedin.com/in/6usraatik" target="_blank" class="btn btn-primary">💼 LinkedIn Profilim</a>
+					<a href="https://github.com/6usraatik" target="_blank" class="btn btn-secondary">🐙 GitHub Depolarım</a>
+					<a href="mailto:6usraatik@gmail.com" class="btn btn-secondary">✉️ E-Posta Gönder</a>
+				</div>
+			</section>
+		</main>
+		<Footer />
+	</body>
+</html>
+
+<style>
+	/* ==========================================================================
+	   1. GOOGLE FONTS - El Yazısı (Caveat) ve Editoryal Başlıklar (Fraunces)
+	   ========================================================================== */
+	@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@600;700&family=Fraunces:ital,opsz,wght@0,9..144,700;1,9..144,700&display=swap');
+
+	/* ==========================================================================
+	   2. RENK PALETİ VE LAYOUT DEĞİŞKENLERİ (Doğal, Sıcak ve Pastel)
+	   ========================================================================== */
+	main {
+		--text-main: #2c2926;         /* Espresso kahvesi */
+		--text-muted: #645f5b;        /* Toprak gri-kahve */
+		--accent-green: #597a61;      /* Adaçayı yeşili */
+		--accent-blue: #4d6d88;       /* Pastel slate mavi */
+		--bg-card: #fcfbf9;           /* Sıcak kemik/krem */
+		--border-color: #e8e2d8;      /* Kum beji kenarlık */
+		--tag-bg: #f5f2eb;            /* Etiket zemini */
+		--shadow-soft: 0 12px 35px -10px rgba(115, 102, 90, 0.12);
+
+		width: 840px;
+		max-width: calc(100% - 2em);
+		margin: 0 auto;
+		padding: 4em 1em;
+		color: var(--text-main);
+	}
+
+	/* ==========================================================================
+	   3. GİRİŞ VE TİPOGRAFİ
+	   ========================================================================== */
+	section {
+		opacity: 0;
+		animation: fadeSlideUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+		margin-bottom: 3.5rem;
+	}
+	.bio-section { animation-delay: 0.1s; }
+	.timeline-section { animation-delay: 0.25s; }
+	.skills-section { animation-delay: 0.4s; }
+	.cert-section { animation-delay: 0.55s; }
+	.contact-section { animation-delay: 0.7s; }
+
+	h1, h2, h3 {
+		color: var(--text-main);
+		font-weight: 800;
+		letter-spacing: -0.02em;
+	}
+	h1 {
+		font-size: 2.5rem;
+		line-height: 1.2;
+		margin: 0.5rem 0 1.2rem 0;
+		font-family: 'Fraunces', serif; /* Editoryal botanik dokunuş */
+	}
+	h2 {
+		font-size: 1.8rem;
+		margin-bottom: 1.5rem;
+		display: flex;
+		align-items: center;
+		gap: 10px;
+	}
+
+	.handwriting-greeting {
+		font-family: 'Caveat', cursive;
+		font-size: 1.8rem;
+		color: var(--accent-green);
+		font-weight: 700;
+		display: inline-block;
+		transform: rotate(-2deg);
+	}
+
+	p {
+		font-size: 1.08rem;
+		line-height: 1.8;
+		color: var(--text-muted);
+		margin-bottom: 1.2rem;
+	}
+	.lead-text {
+		font-size: 1.25rem;
+		color: var(--text-main);
+		font-weight: 500;
+		line-height: 1.6;
+	}
+
+	hr {
+		border: none;
+		height: 1px;
+		background: linear-gradient(90deg, var(--border-color) 0%, transparent 100%);
+		margin: 3rem 0;
+	}
+
+	/* ==========================================================================
+	   4. ZAMAN ÇİZELGESİ (TIMELINE) - Editoryal Yolculuk Akışı
+	   ========================================================================== */
+	.timeline {
+		position: relative;
+		padding-left: 28px;
+		border-left: 2px solid rgba(89, 122, 97, 0.3); /* Adaçayı dikey çizgi */
+		margin-top: 1rem;
+	}
+	.timeline-item {
+		position: relative;
+		margin-bottom: 2.5rem;
+	}
+	.timeline-item:last-child {
+		margin-bottom: 0;
+	}
+	.timeline-dot {
+		position: absolute;
+		left: -35px;
+		top: 4px;
+		width: 12px;
+		height: 12px;
+		background-color: var(--accent-green);
+		border-radius: 50%;
+		border: 3px solid #ffffff;
+		box-shadow: 0 0 0 3px rgba(89, 122, 97, 0.2);
+	}
+	.time-badge {
+		display: inline-block;
+		background: #eff4ec;
+		color: var(--accent-green);
+		padding: 4px 12px;
+		border-radius: 20px;
+		font-size: 0.82em;
+		font-weight: 600;
+		margin-bottom: 0.5rem;
+	}
+	.timeline-content h3 {
+		font-size: 1.3rem;
+		margin: 0.2rem 0 0.1rem 0;
+	}
+	.institution {
+		font-size: 0.95rem;
+		font-weight: 600;
+		color: var(--accent-blue);
+		margin-bottom: 0.6rem;
+	}
+	.details {
+		font-size: 0.98rem;
+		margin-bottom: 0;
+	}
+
+	/* ==========================================================================
+	   5. YETENEK VE YETKİNLİK KARTLARI (GRID)
+	   ========================================================================== */
+	.skills-grid {
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+		gap: 1.5rem;
+	}
+	.skill-card {
+		background: var(--bg-card);
+		border: 1px solid var(--border-color);
+		padding: 1.5rem;
+		border-radius: 16px;
+		box-shadow: var(--shadow-soft);
+		transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+	}
+	.skill-card:hover {
+		transform: translateY(-5px);
+		border-color: var(--accent-green);
+	}
+	.skill-card h4 {
+		font-size: 1.1rem;
+		color: var(--text-main);
+		margin: 0 0 1rem 0;
+		padding-bottom: 0.6rem;
+		border-bottom: 1px dashed rgba(220, 214, 205, 0.8);
+	}
+	.tags {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 8px;
+	}
+	.tags span {
+		background: var(--tag-bg);
+		color: var(--text-main);
+		padding: 6px 12px;
+		border-radius: 8px;
+		font-size: 0.85em;
+		font-weight: 500;
+		border: 1px solid #e6e0d6;
+	}
+
+	/* ==========================================================================
+	   6. SERTİFİKA / CREDLY KUTUSU
+	   ========================================================================== */
+	.cert-box {
+		display: flex;
+		align-items: center;
+		gap: 24px;
+		background: #f5f2eb;
+		border: 1px solid #e6e0d6;
+		padding: 2rem;
+		border-radius: 16px;
+		box-shadow: var(--shadow-soft);
+	}
+	.cert-icon {
+		font-size: 3.5rem;
+		background: #ffffff;
+		padding: 15px;
+		border-radius: 50%;
+		box-shadow: 0 8px 20px rgba(0,0,0,0.06);
+	}
+	.cert-info h3 {
+		margin: 0 0 0.5rem 0;
+		font-size: 1.4rem;
+	}
+	.cert-info p {
+		margin-bottom: 1rem;
+		font-size: 0.98rem;
+	}
+	.cert-link {
+		font-weight: 600;
+		color: var(--accent-green);
+		text-decoration: none;
+		font-size: 0.95rem;
+	}
+	.cert-link:hover {
+		text-decoration: underline;
+	}
+
+	/* ==========================================================================
+	   7. İLETİŞİM BUTONLARI
+	   ========================================================================== */
+	.action-buttons {
+		display: flex;
+		gap: 14px;
+		margin-top: 1.5rem;
+		flex-wrap: wrap;
+	}
+	.btn {
+		padding: 12px 22px;
+		border-radius: 12px;
+		text-decoration: none;
+		font-weight: 600;
+		font-size: 0.95em;
+		transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+		display: inline-flex;
+		align-items: center;
+		gap: 8px;
+	}
+	.btn-primary {
+		background-color: var(--accent-blue);
+		color: #ffffff !important;
+		box-shadow: 0 4px 14px rgba(77, 109, 136, 0.25);
+	}
+	.btn-primary:hover {
+		background-color: #3b556b;
+		transform: translateY(-2px);
+		box-shadow: 0 6px 20px rgba(77, 109, 136, 0.35);
+	}
+	.btn-secondary {
+		background-color: var(--bg-card);
+		color: var(--text-main) !important;
+		border: 1px solid var(--border-color);
+	}
+	.btn-secondary:hover {
+		background-color: #eae4db;
+		transform: translateY(-2px);
+		box-shadow: var(--shadow-soft);
+	}
+
+	/* ==========================================================================
+	   8. ANİMASYONLAR VE KARANLIK MOD (Dark Mode)
+	   ========================================================================== */
+	@keyframes fadeSlideUp {
+		0% { opacity: 0; transform: translateY(28px); }
+		100% { opacity: 1; transform: translateY(0); }
+	}
+
+	:global(.dark) main {
+		--text-main: #f3efe6;
+		--text-muted: #a8a29e;
+		--accent-green: #86b090;
+		--accent-blue: #648dae;
+		--bg-card: #262320;
+		--border-color: #383430;
+		--tag-bg: #1e1b18;
+		--shadow-soft: 0 12px 35px -10px rgba(0, 0, 0, 0.5);
+	}
+	:global(.dark) .cert-box {
+		background: #262320;
+		border-color: #383430;
+	}
+	:global(.dark) .cert-icon {
+		background: #322e2a;
+	}
+	:global(.dark) .timeline-dot {
+		border-color: #1c1a17;
+	}
+	:global(.dark) .btn-secondary:hover {
+		background: #322e2a;
+	}
+
+	/* ==========================================================================
+	   9. MOBİL UYUMLULUK
+	   ========================================================================== */
+	@media (max-width: 768px) {
+		.skills-grid {
+			grid-template-columns: 1fr; /* Mobilde yetenekler tek sütun olsun */
+			gap: 1rem;
+		}
+		.cert-box {
+			flex-direction: column;
+			text-align: center;
+		}
+		h1 { font-size: 2rem; }
+	}
+</style>
