@@ -18,7 +18,7 @@ pubDate: 2026-07-09
 
 ---
 
-## ⚙️ Planlanan ve Aktif Teknoloji Mimarisı
+## ⚙️ Planlanan ve Aktif Teknoloji Mimarisi
 
 * **Çekirdek Diller:** C++
 * **Sistem & Platform:** Visual Studio
