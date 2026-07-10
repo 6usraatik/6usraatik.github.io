@@ -139,3 +139,30 @@ hr {
 	/* added line to stop words getting smushed together (as they go onto separate lines and some screen readers do not understand line feeds as a space */
 	white-space: nowrap;
 }
+
+/* BlogPost.astro dosyasındaki <style> bloğuna ekle */
+.prose h2 {
+    font-size: 1.5rem; /* Mevcut boyutu küçültür (örn. 24px civarı) */
+    margin-top: 1.5em; /* Başlıklar arası boşluğu da düzenler */
+    margin-bottom: 0.75em;
+}
+
+.prose h3 {
+    font-size: 1.25rem; /* h3 daha küçük olmalı */
+    margin-top: 1.25em;
+}
+
+@media (max-width: 600px) {
+    .prose h2 {
+        font-size: 1.3rem; /* Mobilde h2 daha da küçülür */
+    }
+    .prose h3 {
+        font-size: 1.1rem; /* Mobilde h3 daha da küçülür */
+    }
+}
+
+.prose h4 {
+    font-size: 1.1rem;
+    color: rgb(var(--gray-dark));
+    font-weight: 600;
+}
